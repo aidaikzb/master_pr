@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Thu Oct 13 16:57:02 2022
+
+@author: aidai
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Created on Tue Oct 11 19:30:11 2022
 
 @author: aidai
@@ -188,14 +196,14 @@ n = random.randrange(100)
 p = random.uniform(0,1)
 seed = random.randrange(12345)
 amorph_graph = nx.gnp_random_graph(n, p, seed, directed = True)
-
-
+adj_matrix_ag = nx.to_numpy_array(amorph_graph)
 #%% Small world NN
 
 n = random.randrange(100)
 k = random.randrange(10)
 p = random.uniform(0,1)
 small_w_graph = nx.watts_strogatz_graph(n, k,p)
+adj_matrix_swg = nx.to_numpy_array(small_w_graph)
 
 
 
@@ -217,5 +225,4 @@ small_w_graph = nx.watts_strogatz_graph(n, k,p)
 
 
 
-
-
+       
